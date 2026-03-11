@@ -69,7 +69,7 @@ nav a.nav-cta:hover{background:var(--pink);color:#fff;}
 .why-card:hover{background:#1c1c1c;}
 .why-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--pink);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
 .why-card:hover::after{transform:scaleX(1);}
-.why-num{font-family:var(--font-head);font-weight:700;font-size:64px;line-height:1;letter-spacing:-0.03em;color:transparent;-webkit-text-stroke:1px rgba(255,26,108,0.12);margin-bottom:20px;}
+.why-num{font-family:var(--font-head);font-weight:1500;font-size:64px;line-height:1;letter-spacing:-0.03em;color:transparent;-webkit-text-stroke:3px rgba(255, 26, 106, 0.74);margin-bottom:20px;}
 .why-card h5{font-family:var(--font-head);font-weight:700;font-size:18px;color:var(--text);margin-bottom:12px;}
 .why-card p{font-size:14px;color:var(--muted);line-height:1.7;}
 
@@ -119,7 +119,7 @@ footer p{font-family:var(--font-mono);font-size:10px;letter-spacing:0.08em;text-
 .how-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;}
 .how-step{background:var(--ink);border:1px solid var(--border);padding:32px 24px;transition:background 0.2s;}
 .how-step:hover{background:#111;}
-.how-step-num{font-family:var(--font-head);font-weight:700;font-size:56px;line-height:1;letter-spacing:-0.03em;color:transparent;-webkit-text-stroke:1px rgba(255,26,108,0.15);margin-bottom:16px;}
+.how-step-num{font-family:var(--font-head);font-weight:1500;font-size:56px;line-height:1;letter-spacing:-0.03em;color:transparent;-webkit-text-stroke:3px rgba(255, 26, 106, 0.74);margin-bottom:16px;}
 .how-step p{font-size:14px;line-height:1.65;color:rgba(240,237,232,0.6);}
 .how-step p b{display:block;font-family:var(--font-head);font-weight:700;font-size:15px;color:var(--text);margin-bottom:6px;}
 .about-bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:80px;}
@@ -137,8 +137,8 @@ footer p{font-family:var(--font-mono);font-size:10px;letter-spacing:0.08em;text-
 .interviews-hero h1{font-family:var(--font-head);font-weight:700;font-size:clamp(24px,3.5vw,48px);letter-spacing:-0.02em;line-height:1.1;color:var(--text);max-width:760px;}
 .interviews-hero h1 span{color:var(--pink);}
 .interviews-content{padding:80px 52px 0;}
-.interviews-featured{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:2px;}
-.interview-card{background:var(--card);border:1px solid var(--border);padding:40px 36px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:background 0.25s;text-decoration:none;color:inherit;}
+.interviews-featured{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;}
+.interview-card{background:var(--card);border:1px solid var(--border);padding:40px 36px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:background 0.25s;text-decoration:none;color:inherit;  margin-bottom: 8px;}
 .interview-card:hover{background:#1a1a1a;}
 .interview-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--pink);transform:scaleY(0);transform-origin:bottom;transition:transform 0.3s;}
 .interview-card:hover::before{transform:scaleY(1);}
@@ -184,6 +184,15 @@ footer p{font-family:var(--font-mono);font-size:10px;letter-spacing:0.08em;text-
 .info-card.pink h4{color:#fff;}
 .info-card.pink p{color:rgba(255,255,255,0.7);}
 .info-card.pink .info-card-num{-webkit-text-stroke:1px rgba(255,255,255,0.2);}
+
+.interview-thumb {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  background: #1a1a1a;
+}
 
 @media(max-width:900px){
   .header{padding:0 24px;}

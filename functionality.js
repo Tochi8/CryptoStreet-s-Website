@@ -26,3 +26,33 @@ if (btn && menu) {
     }
   };
 }
+
+function animateCount(el) {
+  const target = parseInt(el.getAttribute('data-target'));
+  const suffix = el.getAttribute('data-suffix') || '';
+  const duration = 2000;
+  const step = target / (duration / 16);
+  let current = 0;
+
+  const timer = setInterval(function() {
+    current += step;
+    if (current >= target) {
+      current = target;
+      clearInterval(timer);
+    }
+    el.textContent = Math.floor(current) + suffix;
+  }, 16);
+}
+
+const observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      animateCount(entry.target);
+      observer.unobserve(entry.target);
+    }
+  });
+});
+
+document.querySelectorAll('.stat-n').forEach(function(el) {
+  observer.observe(el);
+});
